@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema Elenco Persone",
+  "type": "object",
+  "required": ["persone"],
+  "properties": {
+    "persone": {
+      "type": "object",
+      "required": ["persona"],
+      "properties": {
+        "persona": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["nome", "cognome", "eta", "indirizzo", "telefoni"],
+            "properties": {
+              "nome": { "type": "string" },
+              "cognome": { "type": "string" },
+              "eta": { "type": "integer", "minimum": 0 },
+              "indirizzo": {
+                "type": "object",
+                "required": ["via", "citta", "cap"],
+                "properties": {
+                  "via": { "type": "string" },
+                  "citta": { "type": "string" },
+                  "cap": { "type": "integer" },
+                  "stato": { "type": "string" },
+                  "Nazione": { "type": "string" }
+                }
+              },
+              "telefoni": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["type", "number"],
+                  "properties": {
+                    "type": { "type": "string" },
+                    "number": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

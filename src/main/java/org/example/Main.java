@@ -1,10 +1,13 @@
 package org.example;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import com.networknt.schema.JsonSchema;
 import com.networknt.schema.JsonSchemaFactory;
 import com.networknt.schema.SpecVersion;
 import com.networknt.schema.ValidationMessage;
+import org.example.modelli.Persona;
+import org.example.modelli.Persone;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -24,7 +27,8 @@ public class Main {
         String pathDati   = "src/main/resources/elencoPersone.json";
 
         try (InputStream schemaStream = new FileInputStream(pathSchema);
-                    InputStream dataStream = new FileInputStream(pathDati)) {
+             InputStream dataStream = new FileInputStream(pathDati)) {
+
             JsonSchema schema = factory.getSchema(schemaStream);
             JsonNode JsonToValidate = mapper.readTree(dataStream);
 
@@ -38,7 +42,13 @@ public class Main {
             }
 
 
-            //AGGIUNGI PARSING CON GSON
+            Gson gson = new Gson();
+            String json = readStringFromFile(pathDati);
+
+            Persone persone = gson.fromJson(json, Persone.class);
+            for(Persona p : persone.persone)
+                System.out.println(p.toString());
+
 
         } catch (java.io.FileNotFoundException e) {
             System.err.println("ERRORE, file non trovati");

@@ -1,49 +1,46 @@
 {
-  "persone": {
-    "persona": [
-      {
-        "cognome": "Rossi",
-        "eta": 30,
-        "indirizzo": {
-          "via": "Legione Gallieno, 52 ",
-          "citta": "Vicenza",
-          "stato": "ITALIA",
-          "cap": 36100
-        },
-        "nome": "Luca",
-        "telefoni": [
-          {
-            "type": "casa",
-            "number": "0444-123456"
-          },
-          {
-            "type": "cellulare",
-            "number": "347-456789"
-          }
-        ]
+  "persona": [
+    {
+      "cognome": "Rossi",
+      "eta": 30,
+      "indirizzo": {
+        "via": "Legione Gallieno, 52 ",
+        "citta": "Vicenza",
+        "nazione": "Italia",
+        "cap": 36100
       },
-      {
-        "cognome": "Bianchi",
-        "eta": 25,
-        "indirizzo": {
-          "via": "Italia, 100",
-          "citta": "Vicenza",
-          "cap": 36078,
-          "Nazione": "Italia"
+      "nome": "Luca",
+      "telefoni": [
+        {
+          "type": "casa",
+          "number": "0444-123456"
         },
-        "nome": "Matteo",
-        "telefoni": [
-          {
-            "type": "Home",
-            "number": "0444-987654"
-          },
-          {
-            "type": "mobile",
-            "number": "347-987456"
-          }
-        ]
-      }
-    ]
-  }
+        {
+          "type": "cellulare",
+          "number": "347-456789"
+        }
+      ]
+    },
+    {
+      "cognome": "Bianchi",
+      "eta": 25,
+      "indirizzo": {
+        "via": "Italia, 100",
+        "citta": "Vicenza",
+        "cap": 36078,
+        "nazione": "Italia"
+      },
+      "nome": "Matteo",
+      "telefoni": [
+        {
+          "type": "Home",
+          "number": "0444-987654"
+        },
+        {
+          "type": "mobile",
+          "number": "347-987456"
+        }
+      ]
+    }
+  ]
 }
-

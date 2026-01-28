@@ -3,7 +3,7 @@
   "title": "Schema Elenco Persone",
   "type": "object",
   "properties": {
-    "persona": {
+    "persone": {
       "type": "array",
       "items": {
         "type": "object",

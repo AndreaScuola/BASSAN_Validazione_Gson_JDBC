@@ -5,6 +5,6 @@ public class Telefono {
     public String number;
 
     public String toString() {
-        return "Telefono{" + "type=" + type + ", number=" + number + '}';
+        return "type: " + type + ", number: " + number;
     }
 }
